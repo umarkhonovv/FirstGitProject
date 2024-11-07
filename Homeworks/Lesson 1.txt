@@ -1,0 +1,451 @@
+using System.Diagnostics.Tracing;
+using System.Net.WebSockets;
+
+namespace visHW1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*1
+            Console.Write("Enter a 4-digit number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            var ones = number % 10;
+            var tens = number / 10 % 10;
+            var hundreds = number / 100 % 10;
+            var thousands = number / 1000 % 10;
+            var newNumber = thousands*1000+hundreds*100+ones*10+tens;
+            Console.WriteLine(newNumber);
+            */
+
+            /*2
+            Console.Write("Enter a 3-digit number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            var ones = number % 10;
+            var tens = number / 10 % 10;
+            var hundreds = number / 100 % 10;
+            var newNumber = tens * 100 + hundreds * 10 + ones;
+            Console.Write(newNumber);
+            */
+
+            /*3
+            Console.Write("Enter a 4-digit number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            var ones = number % 10;
+            var tens = number / 10 % 10;
+            var hundreds = number / 100 % 10;
+            var thousands = number / 1000 % 10;
+            var newNumber = tens * 1000 + hundreds * 100 + thousands * 10 + ones;
+            Console.Write(newNumber);
+            */
+
+            /*4
+            Console.Write("Enter the amount of GB :");
+            var gb = Convert.ToInt32(Console.ReadLine());
+            var mb = gb * 1024;
+            Console.Write(gb);
+            Console.Write(" Gb you entered is equal to ");
+            Console.Write(mb);
+            Console.Write(" Mb");
+            */
+
+            /*5
+            Console.Write("Enter the amount of GB :");
+            var gb = Convert.ToInt32(Console.ReadLine());
+            var bit = gb * 1024 * 1024 * 1024 * 8l;
+            Console.Write(gb + " Gb you entered equal to " + bit + " Bits");
+            */
+
+            /*6
+            Console.Write("Enter the amount of GB :");
+            var gb = Convert.ToDouble(Console.ReadLine());
+            var tb = gb / 1024;
+            Console.Write(gb + " Gb you entered equal to " + tb + " Tb");
+            */
+
+            /*7
+            Console.Write("Enter how many Gb on the flash drive :");
+            var flashMemoryCapacity = Convert.ToInt32(Console.ReadLine());
+            var amountFilm = flashMemoryCapacity / 2;
+            Console.Write("A " + flashMemoryCapacity + " Gb flash drive can hold " + amountFilm + " 2 GB movies");
+            */
+
+            /*8
+            Console.Write("Enter a number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            var secondDegree = number * number;
+            var sixthDegree = secondDegree * secondDegree * secondDegree;
+            Console.Write("The 6th degree of the number you entered is " + sixthDegree);
+            */
+
+            /*9
+            Console.Write("Enter a number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            var secondDegree = number * number;
+            var fourththDegree = secondDegree * secondDegree;
+            var eighthDegree = fourththDegree * fourththDegree;
+            Console.Write("The 8th degree of the number you entered is " + eighthDegree);
+            */
+
+            /*10
+            Console.Write("Enter a natural number : ");
+            var naturalNumber = Convert.ToInt32(Console.ReadLine());
+            if (naturalNumber % 2 == 0)
+            {
+                Console.Write(true);
+            }
+            else
+            {
+                Console.Write(false); ;
+            }
+            */
+
+            /*11
+            Console.Write("Enter a natural number : ");
+            var naturalNumber = Convert.ToInt32(Console.ReadLine());
+            if (naturalNumber % 2 != 0)
+            {
+                Console.Write(true);
+            }
+            else
+            {
+                Console.Write(false); ;
+            }
+            */
+
+            /*12
+            Console.Write("Enter a natural number :");
+            var naturalNumber = Convert.ToInt32(Console.ReadLine());
+            if (naturalNumber / 10 != 0 && naturalNumber / 100 == 0)
+            {
+                Console.Write(true);
+            }
+            else
+            {
+                Console.Write(false);
+            }
+            */
+
+            /*13
+            Console.Write("Enter a natural number :");
+            var naturalNumber = Convert.ToInt32(Console.ReadLine());
+            if (naturalNumber / 1000 != 0 && naturalNumber / 10000 == 0)
+            {
+                Console.Write(true);
+            }
+            else
+            {
+                Console.Write(false);
+            }
+            */
+
+            /*14
+            Console.Write("Enter a natural number :");
+            var naturalNumber = Convert.ToInt32(Console.ReadLine());
+            if (naturalNumber / 10 != 0 && naturalNumber / 100 == 0 && naturalNumber % 2 == 0)
+            {
+                Console.Write(true);
+            }
+            else
+            {
+                Console.Write(false);
+            }
+            */
+
+            /*15
+            Console.Write("Enter a natural number :");
+            var naturalNumber = Convert.ToInt32(Console.ReadLine());
+            if (naturalNumber / 100 != 0 && naturalNumber / 1000 == 0 && naturalNumber % 2 != 0)
+            {
+                Console.Write(true);
+            }
+            else
+            {
+                Console.Write(false);
+            }
+            */
+
+            /*16
+            Console.Write("Enter a natural number :");
+            var naturalNumber = Convert.ToInt32(Console.ReadLine());
+            if (naturalNumber / 1000 != 0 && naturalNumber / 10000 == 0 && naturalNumber % 2 == 0)
+            {
+                Console.Write(true);
+            }
+            else
+            {
+                Console.Write(false);
+            }
+            */
+
+            /*17
+            Console.Write("Enter the 1st natural number :");
+            var firstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the 2nd natural number :");
+            var secondNUmber = Convert.ToInt32(Console.ReadLine());
+            if (firstNumber % 2 != 0 && secondNUmber % 2 != 0)
+            {
+                Console.Write(true);
+            }
+            else
+            {
+                Console.Write(false);
+            }
+            */
+
+            /*18
+            Console.Write("Enter the 1st natural number :");
+            var firstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the 2nd natural number :");
+            var secondNUmber = Convert.ToInt32(Console.ReadLine());
+            if (firstNumber % 2 == 0 && secondNUmber % 2 == 0)
+            {
+                Console.Write(true);
+            }
+            else
+            {
+                Console.Write(false);
+            }
+            */
+
+            /*19
+            Console.Write("Enter the 1st natural number :");
+            var firstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the 2nd natural number :");
+            var secondNumber = Convert.ToInt32(Console.ReadLine());
+            if (firstNumber % 2 != 0 && secondNumber % 2 != 0 && firstNumber / 10 != 0 && firstNumber / 100 == 0 && secondNumber / 10 != 0 && secondNumber / 100 == 0)
+            {
+                Console.Write(true);
+            }
+            else
+            {
+                Console.Write(false);
+            }
+            */
+
+            /*20
+            Console.Write("Enter a 2-digit number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            var ones = number % 10;
+            var tens = number / 10 % 10;
+            if (ones == tens)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+            /*21
+            Console.Write("Enter a 2-digit number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            var ones = number % 10;
+            var tens = number / 10 % 10;
+            var sum = ones + tens;
+            if (sum > 10)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+            /*22
+            Console.Write("Enter a 2-digit number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            var ones = number % 10;
+            var tes = number / 10 % 10;
+            var multiplication = ones * tes;
+            if (multiplication > 20)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+            /*23
+            Console.Write("Enter a 2-digit  number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            var ones = number % 10;
+            var tens = number / 10 % 10;
+            if (ones % 2 != 0 && tens % 2 != 0)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+            /*24
+            Console.Write("Enter a 2-digit number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            var ones = number % 10;
+            var tens = number / 10 % 10;
+            if (ones > 5 && tens > 5)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+            /*25
+            Console.Write("Enter a number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            if (number % 3 == 0)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+            /*26
+            Console.Write("Enter a number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            if (number % 7 == 0)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+            /*27
+            Console.Write("Enter a number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            if (number % 3 == 0 && number % 8 == 0)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+            /*28
+            Console.Write("Enter a number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            if (number % 7 == 0 || number % 9 == 0)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+            /*29
+            Console.Write("Enter a number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            if (number % 5 != 0)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+            /*30
+            Console.Write("Enter a number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            if (number % 4 == 0 && number % 3 != 0)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+            /*31
+            Console.Write("Enter the first number :");
+            var firstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the second number :");
+            var secondNumber = Convert.ToInt32(Console.ReadLine());
+            if (firstNumber > secondNumber)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+            /*32
+            Console.Write("Enter the first number :");
+            var firstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the second number :");
+            var secondNumber = Convert.ToInt32(Console.ReadLine());
+            if (firstNumber == secondNumber)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+            /*33
+            Console.Write("Enter the first number :");
+            var firstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the second number :");
+            var secondNumber = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the third number :");
+            var thirdNumber = Convert.ToInt32(Console.ReadLine());
+            if (firstNumber > secondNumber && thirdNumber < firstNumber)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+            Console.Write("Enter the first number :");
+            var firstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the second number :");
+            var secondNumber = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the third number :");
+            var thirdNumber = Convert.ToInt32(Console.ReadLine());
+            if (thirdNumber > secondNumber && thirdNumber > firstNumber)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+
+
+
+
+
+
+
+        }
+    }
+}
