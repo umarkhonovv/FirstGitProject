@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\gitFirst\\FirstGitProject\\src\\",
+  "WorkspaceRootPath": "D:\\GitHubProjects\\FirstGitProject\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{289FB0FD-798A-4671-BDFC-550F136F7FAA}|src.csproj|d:\\gitfirst\\firstgitproject\\src\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{289FB0FD-798A-4671-BDFC-550F136F7FAA}|src.csproj|d:\\githubprojects\\firstgitproject\\src\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{289FB0FD-798A-4671-BDFC-550F136F7FAA}|src.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\gitFirst\\FirstGitProject\\src\\Program.cs",
+              "DocumentMoniker": "D:\\GitHubProjects\\FirstGitProject\\src\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\gitFirst\\FirstGitProject\\src\\Program.cs",
+              "ToolTip": "D:\\GitHubProjects\\FirstGitProject\\src\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwBUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-07T05:51:33.054Z",
               "EditorCaption": ""

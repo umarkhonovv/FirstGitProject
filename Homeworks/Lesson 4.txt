@@ -1,0 +1,154 @@
+namespace forEverythink
+{
+    internal class Program
+    {
+        // 1-Function
+        public static string AddingHello(string name)
+        {
+            var result = $"Hello {name}";
+            return result;
+        }
+
+        // 2-Function
+        public static string AddingTwoTexts(string firstText, string secondText)
+        {
+            var result = $"{firstText} {secondText} {secondText} {firstText}";
+            return result;
+        }
+
+        // 3-Function
+        public static string MakeOutWord(string firstText, string secondText)
+        {
+            var insertedTexts = firstText.Insert(2, secondText);
+            return insertedTexts;
+        }
+
+        // 4-Function
+        public static string LastTwoLetters(string text)
+        {
+            var substredText = text.Substring(text.Length - 2);
+            var result = $"{substredText}{substredText}{substredText}";
+            return result;
+        }
+
+        // 5-Function
+        public static string FirstTwo(string text)
+        {
+            if (text.Length > 1)
+            {
+                var firstTwoLetters = text.Substring(0, 2);
+                return firstTwoLetters;
+            }
+            else
+            {
+                return text;
+            }
+        }
+
+        // 6-Function
+        public static string FirstHalf(string text)
+        {
+            var halfOfString = text.Length / 2;
+            var result = text.Substring(0, halfOfString);
+            return result;
+        }
+
+        // 7-Function
+        public static string RemoveFirstAndLast(string text)
+        {
+            var result = text.Substring(1, text.Length - 1);
+            return result;
+        }
+
+        // 8-Function
+        public static string ShortAndLongStrings(string firstText, string secondText)
+        {
+            var theLengthOfFirstString = firstText.Length;
+            var theLengthOfSecondString = secondText.Length;
+            if (theLengthOfFirstString < theLengthOfSecondString)
+            {
+                var result = $"{firstText} {secondText} {firstText}";
+                return result;
+            }
+            else
+            {
+                var result = $"{secondText} {firstText} {secondText}";
+                return result;
+            }
+        }
+
+        // 9-Function
+        public static string FirstLetterRemoved(string firstText, string secondText)
+        {
+            var firstRemovedText = firstText.Remove(0, 1);
+            var secondRomovedText = secondText.Remove(0, 1);
+            var result = $"{firstRemovedText} {secondText}";
+            return result;
+        }
+
+        // 10-Function
+        public static string ShiftFirstTwoToEnd(string text)
+        {
+            var substeredText = text.Substring(2);
+            var removedText = text.Remove(2);
+            var result = $"{substeredText}{removedText}";
+            return result;
+        }
+
+        // 11-Function
+        public static char FirstOrLast(string text, bool front)
+        {
+            if (front)
+            {
+                return text[0];
+            }
+            else
+            {
+                return text[text.Length - 1];
+            }
+        }
+
+        // 12-Function
+        public static string GetFirstAndLastNChars(string text, int number)
+        {
+            var substringFromTheFirst = text.Substring(0, number);
+            var substribgFromTheLast = text.Substring(text.Length - number);
+            var result = $"{substringFromTheFirst}{substribgFromTheLast}";
+            return result;
+        }
+
+        // 13-Function
+        public static string MiddleThree(string text)
+        {
+            var halfLengthOfString = text.Length / 2;
+            var result = $"{text[halfLengthOfString - 1]}{text[halfLengthOfString]}{text[halfLengthOfString + 1]}";
+            return result;
+        }
+
+        // 14-Function
+        public static string MergeStrings(string firstText, string secondText)
+        {
+            if (firstText[firstText.Length - 1] == secondText[0])
+            {
+                var removedText = secondText.Remove(0, 1);
+                var result = $"{firstText}{removedText}";
+                return result;
+            }
+            else
+            {
+                var result = $"{firstText}{secondText}";
+                return result;
+            }
+        }
+
+        // 15-Function
+        public static string 
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the name :");
+            var name = Console.ReadLine();
+            var result = MiddleThree(name);
+            Console.Write($"Result : {result}");
+        }
+    }
+}

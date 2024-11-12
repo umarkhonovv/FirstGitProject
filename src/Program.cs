@@ -1,17 +1,29 @@
-﻿namespace src
+﻿namespace ModulFirstPr
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a 4-digit number :");
-            var number = Convert.ToInt32(Console.ReadLine());
-            var ones = number % 10;
-            var tens = number / 10 % 10;
-            var hundreds = number / 100 % 10;
-            var thousands = number / 1000 % 10;
-            var result = ones + tens + hundreds + thousands;
-            Console.WriteLine(result);
+            Console.Write("Enter the text :");
+            var text = Console.ReadLine();
+
+            var newText = "";
+            if (text[0] == ' ')
+            {
+                text.Remove(0, 1);
+            }
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (text[i] == ' ' && text[i + 1] == ' ')
+                {
+                    text.Remove(i, 1);
+                }
+                else
+                {
+                    newText += text[i];
+                }
+            }
+            Console.WriteLine(newText);
 
         }
     }

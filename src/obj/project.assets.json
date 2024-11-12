@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\gitFirst\\FirstGitProject\\src\\src.csproj",
+      "projectUniqueName": "D:\\GitHubProjects\\FirstGitProject\\src\\src.csproj",
       "projectName": "src",
-      "projectPath": "D:\\gitFirst\\FirstGitProject\\src\\src.csproj",
+      "projectPath": "D:\\GitHubProjects\\FirstGitProject\\src\\src.csproj",
       "packagesPath": "C:\\Users\\umarh\\.nuget\\packages\\",
-      "outputPath": "D:\\gitFirst\\FirstGitProject\\src\\obj\\",
+      "outputPath": "D:\\GitHubProjects\\FirstGitProject\\src\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\umarh\\AppData\\Roaming\\NuGet\\NuGet.Config",
